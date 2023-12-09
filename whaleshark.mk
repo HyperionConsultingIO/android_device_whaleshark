@@ -7,7 +7,10 @@ $(call inherit-product, device/google_car/tangorpro_car/aosp_tangorpro_car.mk)
 # see also https://source.android.com/docs/automotive/start/pixelxl?hl=en
 # somehow audiocontrol and vehicle service have changed, complains about 'unknown module'
 
-# TODO audiocontrol and vehicle service need to be built with this product
+# vehicle service needs to be built with this product, normally this is done by Automotive OEMs
+# we want to use the default stubbed service here, so we need to manually build it:
+# m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service
+# TODO integrate with device tree build
 
 PRODUCT_BRAND := alexanderwolz
 PRODUCT_NAME := whaleshark
