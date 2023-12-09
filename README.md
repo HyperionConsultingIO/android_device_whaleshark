@@ -11,7 +11,7 @@
 
 This device configuration is intented to be run on a *Google Pixel Tablet (tangorpro)*
 
-See also [aosp_docker](https://github.com/alexanderwolz/aosp_docker) for a Docker-based tool chain
+See also [aosp_docker](https://github.com/alexanderwolz/aosp_docker) for a Docker-based tool chain and [android_tools](https://github.com/alexanderwolz/android_tools) for additonal sync and flash scripts. 
 
 
 ## 🛠️ Setup
@@ -73,3 +73,5 @@ Currently, there is an issue with vendor partition, so it needs to be adb synced
 11. ```adb remount``` (eventually you need to ```adb shell vdc checkpoint commitChanges```)
 12. ```adb synch vendor```
 13. ```adb reboot```
+
+Otherwise you can use my script collection [here](https://github.com/alexanderwolz/android_tools) for an automated sync and device flash

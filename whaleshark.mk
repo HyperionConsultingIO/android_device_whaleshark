@@ -12,6 +12,8 @@ $(call inherit-product, device/google_car/tangorpro_car/aosp_tangorpro_car.mk)
 # m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service
 # TODO integrate with device tree build
 
+PRODUCT_PACKAGE_OVERLAYS :=  device/alexanderwolz/whaleshark/overlay $(PRODUCT_PACKAGE_OVERLAYS)
+
 PRODUCT_BRAND := alexanderwolz
 PRODUCT_NAME := whaleshark
 PRODUCT_MODEL := Whale Shark AAOS on Tangorpro
