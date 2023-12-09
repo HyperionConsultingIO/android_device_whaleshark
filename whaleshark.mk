@@ -11,5 +11,9 @@ $(call inherit-product, device/google_car/tangorpro_car/aosp_tangorpro_car.mk)
 
 PRODUCT_BRAND := alexanderwolz
 PRODUCT_NAME := whaleshark
-PRODUCT_DEVICE := whaleshark
 PRODUCT_MODEL := Whale Shark AAOS on Tangorpro
+
+# we reuse the original device configuration from device/google_car/tangorpro
+# otherwise it complains about "error: cannot assign to readonly variable: PRODUCT_NAME"
+PRODUCT_DEVICE := tangorpro
+PRODUCT_MANUFACTURER := Google
