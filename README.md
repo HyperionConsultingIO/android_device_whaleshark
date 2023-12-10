@@ -75,3 +75,10 @@ Currently, there is an issue with vendor partition, so it needs to be adb synced
 13. ```adb reboot```
 
 Otherwise you can use my script collection [here](https://github.com/alexanderwolz/android_tools) for an automated sync and device flash
+
+
+## 🧑‍💻 Known Issues
+
+1. Android Automotive service is not build automatically even though it is set in the product-package definition. 
+2. While building the firmware, some vendor files are missing in the image, they must be pushed manually via ```adb sync vendor```
+3. Screen rotation is upside-down. Should be fixed by overlay but it is not applied yet. Can be temporarily changed with ```adb shell settings put system user_rotation 3```
