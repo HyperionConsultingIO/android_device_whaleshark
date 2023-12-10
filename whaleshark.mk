@@ -12,13 +12,14 @@ $(call inherit-product, device/google_car/tangorpro_car/aosp_tangorpro_car.mk)
 # m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service
 PRODUCT_PACKAGES += android.hardware.automotive.vehicle@2.0-default-service
 
-PRODUCT_PACKAGE_OVERLAYS :=  device/alexanderwolz/whaleshark/overlay $(PRODUCT_PACKAGE_OVERLAYS)
+# analog to google cheetah car
+PRODUCT_PACKAGE_OVERLAYS += device/alexanderwolz/whaleshark/overlay
 
 PRODUCT_BRAND := alexanderwolz
+PRODUCT_MANUFACTURER := alexanderwolz
 PRODUCT_NAME := whaleshark
 PRODUCT_MODEL := Whale Shark AAOS on Tangorpro
 
 # we reuse the original device configuration from device/google_car/tangorpro
 # otherwise it complains about "error: cannot assign to readonly variable: PRODUCT_NAME"
 PRODUCT_DEVICE := tangorpro
-PRODUCT_MANUFACTURER := Google
