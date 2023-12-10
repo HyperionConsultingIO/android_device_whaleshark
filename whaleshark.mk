@@ -10,7 +10,7 @@ $(call inherit-product, device/google_car/tangorpro_car/aosp_tangorpro_car.mk)
 # vehicle service needs to be built with this product, normally this is done by Automotive OEMs
 # we want to use the default stubbed service here, so we need to manually build it:
 # m -j$(nproc --all) android.hardware.automotive.vehicle@2.0-default-service
-# TODO integrate with device tree build
+PRODUCT_PACKAGES += android.hardware.automotive.vehicle@2.0-default-service
 
 PRODUCT_PACKAGE_OVERLAYS :=  device/alexanderwolz/whaleshark/overlay $(PRODUCT_PACKAGE_OVERLAYS)
 
